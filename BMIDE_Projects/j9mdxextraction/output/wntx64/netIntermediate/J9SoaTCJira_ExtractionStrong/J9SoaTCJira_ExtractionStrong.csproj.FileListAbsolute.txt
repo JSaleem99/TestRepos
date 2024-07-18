@@ -1,0 +1,3 @@
+C:\Apps\tcroot\bmide\workspace\14000.0.0\j9mdxextraction\output\wntx64\assemblies\J9SoaTCJira_ExtractionStrong.dll
+C:\Apps\tcroot\bmide\workspace\14000.0.0\j9mdxextraction\output\wntx64\netIntermediate\J9SoaTCJira_ExtractionStrong\J9SoaTCJira_ExtractionStrong.csprojResolveAssemblyReference.cache
+C:\Apps\tcroot\bmide\workspace\14000.0.0\j9mdxextraction\output\wntx64\netIntermediate\J9SoaTCJira_ExtractionStrong\J9SoaTCJira_ExtractionStrong.dll

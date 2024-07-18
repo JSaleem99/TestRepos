@@ -1,0 +1,86 @@
+# ==================================================
+# Copyright 2013.
+# Siemens Product Lifecycle Management Software Inc.
+# All Rights Reserved.
+# ==================================================
+# ==================================================
+#             Auto-generated source
+#                 DO NOT EDIT
+# ==================================================
+
+
+
+# ==================================================
+# Define macros for Strong C++ Binding libraries
+# ==================================================
+J9SOATCJIRA_OBJECTSYNCSTRONG_DRV        = $(PROJECT_DRV)$(PS)J9SoaTCJira_ObjectSyncClient$(PS)strong$(PS)cpp
+J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ        = $(PROJECT_OBJ)$(PS)libj9soatcjira_objectsyncstrong
+J9SOATCJIRA_OBJECTSYNCSTRONG_CXXS       = $(J9SOATCJIRA_OBJECTSYNCSTRONG_DRV)$(PS)*.cxx
+J9SOATCJIRA_OBJECTSYNCSTRONG_CXX_FLAGS  = $(CXX_FLAGS) -DIPLIB=libj9soatcjira_objectsyncstrong
+J9SOATCJIRA_OBJECTSYNCSTRONG_LINK_FLAGS = $(LINK_FLAGS)
+J9SOATCJIRA_OBJECTSYNCSTRONG_INCLUDES   = $(CPP_INCLUDES) -I$(J9SOATCJIRA_OBJECTSYNCSTRONG_DRV) \
+                                  -I$(PROJECT_DRV)$(PS)TcSoaStrongModelJ9mdxextraction$(PS)cpp$(PS)strong
+J9SOATCJIRA_OBJECTSYNCSTRONG_LIB_PATH   = $(LP)$(PROJECT_BIN) $(LIB_PATH)
+J9SOATCJIRA_OBJECTSYNCSTRONG_LIBS       =   $(LIB_PREFIX)tcsoamodelcm$(LIB_SUFFIX) \
+                                  $(SYSLIBS)    \
+                                  $(LIB_PREFIX)tcsoacommon$(LIB_SUFFIX)  $(LIB_PREFIX)tcsoaclient$(LIB_SUFFIX)
+J9SOATCJIRA_OBJECTSYNCSTRONG_LD_FLAGS   = $(J9SOATCJIRA_OBJECTSYNCSTRONG_LINK_FLAGS) $(J9SOATCJIRA_OBJECTSYNCSTRONG_LIB_PATH)
+J9SOATCJIRA_OBJECTSYNCSTRONG_TARGET     = $(PROJECT_BIN)$(PS)libj9soatcjira_objectsyncstrong
+
+
+
+libj9soatcjira_objectsyncstrong_allNoOp:
+libj9soatcjira_objectsyncstrong_all:   $(J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ)  $(J9SOATCJIRA_OBJECTSYNCSTRONG_TARGET).$(LIB_EXT)
+
+
+$(J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ) :
+	@echo Creating: $(J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ)
+	-@$(MAKE_DIR) $(J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ)
+
+$(J9SOATCJIRA_OBJECTSYNCSTRONG_CXXS) :
+
+# ==================================================
+# Windows Build Target
+# ==================================================
+$(J9SOATCJIRA_OBJECTSYNCSTRONG_TARGET).dll : $(J9SOATCJIRA_OBJECTSYNCSTRONG_CXXS)
+	@echo ________________________________________________________________________________
+	@echo Building C++ Client libj9soatcjira_objectsyncstrong
+	@echo Compiling Source...
+	@$(COMPILE)  $(J9SOATCJIRA_OBJECTSYNCSTRONG_CXX_FLAGS) $(J9SOATCJIRA_OBJECTSYNCSTRONG_INCLUDES) -c $(**)   $(CARG_OUT)$(J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ)$(PS)
+	@echo.
+	@$(LINK) $(J9SOATCJIRA_OBJECTSYNCSTRONG_LD_FLAGS) $(J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ)$(PS)*.$(OBJ_EXT)  $(J9SOATCJIRA_OBJECTSYNCSTRONG_LIBS)  $(LARG_OUT)$(J9SOATCJIRA_OBJECTSYNCSTRONG_TARGET).dll
+	$(COPY_FILE)  $(PROJECT_BIN)$(PS)libj9soatcjira_objectsyncstrong.dll $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)
+	$(COPY_FILE)  $(PROJECT_BIN)$(PS)libj9soatcjira_objectsyncstrong.lib $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)
+	@echo ________________________________________________________________________________
+
+
+# ==================================================
+# UNIX Build Target
+# ==================================================
+$(J9SOATCJIRA_OBJECTSYNCSTRONG_TARGET).so : $(J9SOATCJIRA_OBJECTSYNCSTRONG_CXXS)
+	@echo ________________________________________________________________________________
+	@echo Building C++ Client libj9soatcjira_objectsyncstrong
+	@-rm *.$(OBJ_EXT)
+	@echo Compiling $(J9SOATCJIRA_OBJECTSYNCSTRONG_CXXS)
+	@$(COMPILE)  $(J9SOATCJIRA_OBJECTSYNCSTRONG_CXX_FLAGS) $(J9SOATCJIRA_OBJECTSYNCSTRONG_INCLUDES) -c $(J9SOATCJIRA_OBJECTSYNCSTRONG_CXXS) 
+	@mv *.$(OBJ_EXT) $(J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ)
+	@echo Linking $(J9SOATCJIRA_OBJECTSYNCSTRONG_TARGET).so
+	@$(LINK) $(J9SOATCJIRA_OBJECTSYNCSTRONG_LD_FLAGS) $(J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ)$(PS)*.$(OBJ_EXT)  $(J9SOATCJIRA_OBJECTSYNCSTRONG_LIBS)  $(LARG_OUT) $(J9SOATCJIRA_OBJECTSYNCSTRONG_TARGET).so
+	$(COPY_FILE)  $(PROJECT_BIN)$(PS)libj9soatcjira_objectsyncstrong.so $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)
+	@echo ________________________________________________________________________________
+	
+
+
+
+libj9soatcjira_objectsyncstrong_cleanNoOp:	
+libj9soatcjira_objectsyncstrong_clean:
+	@echo ________________________________________________________________________________
+	@echo Cleaning C++ Client libj9soatcjira_objectsyncstrong
+	-$(DELETE_DIR)  $(J9SOATCJIRA_OBJECTSYNCSTRONG_OBJ)
+	-$(DELETE_FILE) $(PROJECT_BIN)$(PS)libj9soatcjira_objectsyncstrong.*	
+	-$(DELETE_FILE) $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)$(PS)libj9soatcjira_objectsyncstrong.so
+	-$(DELETE_FILE) $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)$(PS)libj9soatcjira_objectsyncstrong.dll
+	-$(DELETE_FILE) $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)$(PS)libj9soatcjira_objectsyncstrong.lib
+	@echo ________________________________________________________________________________
+	
+

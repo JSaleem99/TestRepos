@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<wsdl:definitions 
+    targetNamespace="http://j9.com/Services/TCJira_Extraction/2022-06" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" 
+    xmlns:imp0="http://teamcenter.com/Schemas/Soa/2006-03/Base"
+    xmlns:imp1="http://teamcenter.com/Schemas/Soa/2006-03/Exceptions"
+    xmlns:imp2="http://j9.com/Schemas/TCJira_Extraction/2022-06/Extraction"
+    xmlns:imp3="http://teamcenter.com/webservices/2005-06/schemas/WSFaults"
+    xmlns:tns="http://j9.com/Services/TCJira_Extraction/2022-06">
+
+
+
+    
+
+    <wsdl:types>
+        <xs:schema>
+            <xs:import namespace="http://teamcenter.com/Schemas/Soa/2006-03/Base" schemaLocation="SoaBase.xsd" />
+            <xs:import namespace="http://teamcenter.com/Schemas/Soa/2006-03/Exceptions" schemaLocation="SoaExceptions.xsd" />
+            <xs:import namespace="http://j9.com/Schemas/TCJira_Extraction/2022-06/Extraction" schemaLocation="TCJiraExtraction2206Extraction.xsd" />
+            <xs:import namespace="http://teamcenter.com/webservices/2005-06/schemas/WSFaults" schemaLocation="WSFaults.xsd" />
+        </xs:schema>
+    </wsdl:types>
+
+
+    <wsdl:message name="InternalServerFaultFault">
+        <wsdl:part name="exx01" element="imp1:InternalServerFault" /> 
+    </wsdl:message>
+    <wsdl:message name="InvalidUserFaultFault">
+        <wsdl:part name="exx02" element="imp1:InvalidUserFault" /> 
+    </wsdl:message>
+    <wsdl:message name="extractionOperationRequest">
+        <wsdl:part name="in0" element="imp2:ExtractionOperationInput" /> 
+    </wsdl:message>
+    <wsdl:message name="extractionOperationResponse">
+        <wsdl:part name="out" element="imp2:Output" /> 
+    </wsdl:message>
+
+
+
+    <wsdl:portType name="TCJiraExtraction2206Extraction">
+
+        <wsdl:operation name="extractionOperation">
+            <wsdl:documentation><![CDATA[
+        .
+        ]]></wsdl:documentation>
+            <wsdl:input  message="tns:extractionOperationRequest"  name="extractionOperationRequest" />
+            <wsdl:output message="tns:extractionOperationResponse" name="extractionOperationResponse" /> 
+            			<wsdl:fault  message="tns:InternalServerFaultFault"     name="InternalServerFaultError" />			<wsdl:fault  message="tns:InvalidUserFaultFault"     name="InvalidUserFaultError" />
+        </wsdl:operation>
+
+    </wsdl:portType>
+
+
+    <wsdl:binding name="TCJiraExtraction2206ExtractionSoapBinding" type="tns:TCJiraExtraction2206Extraction">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+
+        <wsdl:operation name="extractionOperation">
+            <soap:operation style="document" soapAction="extractionOperation" /> 
+            <wsdl:input><soap:body  use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+             
+		<wsdl:fault name="InternalServerFaultError"><soap:fault name="InternalServerFaultError" use="literal" /></wsdl:fault>
+		<wsdl:fault name="InvalidUserFaultError"><soap:fault name="InvalidUserFaultError" use="literal" /></wsdl:fault>
+       </wsdl:operation>
+
+    </wsdl:binding>
+
+    <wsdl:service name="TCJiraExtraction2206ExtractionService">
+       <wsdl:port binding="tns:TCJiraExtraction2206ExtractionSoapBinding" name="TCJira-Extraction-2022-06-Extraction">       
+           <soap:address 
+              location="http://localhost:80/PTierApp/WebServices/TCJira-Extraction-2022-06-Extraction" /> 
+       </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

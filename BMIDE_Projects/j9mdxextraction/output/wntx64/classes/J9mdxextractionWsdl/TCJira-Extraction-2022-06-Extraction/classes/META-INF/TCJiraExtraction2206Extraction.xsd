@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soa="http://teamcenter.com/Schemas/Soa/2006-03/Base" xmlns:tns="http://j9.com/Schemas/TCJira_Extraction/2022-06/Extraction" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://j9.com/Schemas/TCJira_Extraction/2022-06/Extraction">
+    <xsd:import namespace="http://teamcenter.com/Schemas/Soa/2006-03/Base" schemaLocation="SoaBase.xsd"/>
+    <xsd:complexType name="Input">
+        <xsd:annotation>
+            <xsd:documentation/>
+        </xsd:annotation>
+        <xsd:sequence/>
+        <xsd:attribute name="objectId" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation>
+                    Object ID
+                </xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="objectType" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation>
+                    Object type
+                </xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="extractionPath" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation>
+                    Extraction Path
+                </xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+    <xsd:element name="Output">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation/>
+            </xsd:annotation>
+            <xsd:sequence/>
+            <xsd:attribute name="jsonPath" type="xsd:string" use="required">
+                <xsd:annotation>
+                    <xsd:documentation>
+                    output Json Path
+                </xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ExtractionOperationInput">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="operationInput" type="tns:Input">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                        operation input
+                    </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

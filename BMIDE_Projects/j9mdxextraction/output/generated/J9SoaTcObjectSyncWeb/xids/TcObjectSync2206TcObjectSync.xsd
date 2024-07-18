@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!-- 
+ @<COPYRIGHT>@
+ ==================================================
+ Copyright 2012
+ Siemens Product Lifecycle Management Software Inc.
+ All Rights Reserved.
+ ==================================================
+ @<COPYRIGHT>@
+
+ ==================================================
+
+   Auto-generated source from service interface.
+                 DO NOT EDIT
+
+ ==================================================
+-->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://j9.com/Schemas/TcObjectSync/2022-06/TcObjectSync"
+    xmlns:tns="http://j9.com/Schemas/TcObjectSync/2022-06/TcObjectSync" 
+    xmlns:soa="http://teamcenter.com/Schemas/Soa/2006-03/Base"
+     
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+    <xsd:import namespace="http://teamcenter.com/Schemas/Soa/2006-03/Base"           schemaLocation="SoaBase.xsd" />
+    
+    
+
+    <xsd:complexType name="INPUTMAP"> 
+        <xsd:annotation>
+                <xsd:appinfo>
+                     <xjb4c-hashmap>
+                          <key>key</key>
+                          <value>value</value>
+                     </xjb4c-hashmap>
+                </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+        </xsd:sequence>
+        <xsd:attribute name="key" type="xsd:string" use="required">
+       </xsd:attribute>
+        <xsd:attribute name="value" type="xsd:string" use="required">
+       </xsd:attribute>
+    </xsd:complexType> 
+
+
+
+    <xsd:element name="OUTPUT">
+    <xsd:complexType>
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[
+                
+            ]]></xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+        </xsd:sequence>
+        <xsd:attribute name="outputValue" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[
+                    output value
+                ]]></xsd:documentation>
+            </xsd:annotation>
+       </xsd:attribute>
+    </xsd:complexType>
+    </xsd:element>
+
+
+
+    <xsd:element name="TcObjectSyncOperationInput">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="inputMap" type="tns:INPUTMAP"  minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                    <xsd:appinfo>
+                        <xjb4c-type>hashmap</xjb4c-type>
+                    </xsd:appinfo>
+                    <xsd:documentation><![CDATA[
+                        input map value
+                    ]]></xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    </xsd:element>
+    <!--  OUTPUT is used as the tcObjectSyncOperation output element -->
+
+
+
+</xsd:schema>

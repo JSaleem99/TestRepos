@@ -1,0 +1,86 @@
+# ==================================================
+# Copyright 2013.
+# Siemens Product Lifecycle Management Software Inc.
+# All Rights Reserved.
+# ==================================================
+# ==================================================
+#             Auto-generated source
+#                 DO NOT EDIT
+# ==================================================
+
+
+
+# ==================================================
+# Define macros for Strong C++ Binding libraries
+# ==================================================
+J9SOATCJIRA_EXTRACTIONSTRONG_DRV        = $(PROJECT_DRV)$(PS)J9SoaTCJira_ExtractionClient$(PS)strong$(PS)cpp
+J9SOATCJIRA_EXTRACTIONSTRONG_OBJ        = $(PROJECT_OBJ)$(PS)libj9soatcjira_extractionstrong
+J9SOATCJIRA_EXTRACTIONSTRONG_CXXS       = $(J9SOATCJIRA_EXTRACTIONSTRONG_DRV)$(PS)*.cxx
+J9SOATCJIRA_EXTRACTIONSTRONG_CXX_FLAGS  = $(CXX_FLAGS) -DIPLIB=libj9soatcjira_extractionstrong
+J9SOATCJIRA_EXTRACTIONSTRONG_LINK_FLAGS = $(LINK_FLAGS)
+J9SOATCJIRA_EXTRACTIONSTRONG_INCLUDES   = $(CPP_INCLUDES) -I$(J9SOATCJIRA_EXTRACTIONSTRONG_DRV) \
+                                  -I$(PROJECT_DRV)$(PS)TcSoaStrongModelJ9mdxextraction$(PS)cpp$(PS)strong
+J9SOATCJIRA_EXTRACTIONSTRONG_LIB_PATH   = $(LP)$(PROJECT_BIN) $(LIB_PATH)
+J9SOATCJIRA_EXTRACTIONSTRONG_LIBS       =   $(LIB_PREFIX)tcsoamodelcm$(LIB_SUFFIX) \
+                                  $(SYSLIBS)    \
+                                  $(LIB_PREFIX)tcsoacommon$(LIB_SUFFIX)  $(LIB_PREFIX)tcsoaclient$(LIB_SUFFIX)
+J9SOATCJIRA_EXTRACTIONSTRONG_LD_FLAGS   = $(J9SOATCJIRA_EXTRACTIONSTRONG_LINK_FLAGS) $(J9SOATCJIRA_EXTRACTIONSTRONG_LIB_PATH)
+J9SOATCJIRA_EXTRACTIONSTRONG_TARGET     = $(PROJECT_BIN)$(PS)libj9soatcjira_extractionstrong
+
+
+
+libj9soatcjira_extractionstrong_allNoOp:
+libj9soatcjira_extractionstrong_all:   $(J9SOATCJIRA_EXTRACTIONSTRONG_OBJ)  $(J9SOATCJIRA_EXTRACTIONSTRONG_TARGET).$(LIB_EXT)
+
+
+$(J9SOATCJIRA_EXTRACTIONSTRONG_OBJ) :
+	@echo Creating: $(J9SOATCJIRA_EXTRACTIONSTRONG_OBJ)
+	-@$(MAKE_DIR) $(J9SOATCJIRA_EXTRACTIONSTRONG_OBJ)
+
+$(J9SOATCJIRA_EXTRACTIONSTRONG_CXXS) :
+
+# ==================================================
+# Windows Build Target
+# ==================================================
+$(J9SOATCJIRA_EXTRACTIONSTRONG_TARGET).dll : $(J9SOATCJIRA_EXTRACTIONSTRONG_CXXS)
+	@echo ________________________________________________________________________________
+	@echo Building C++ Client libj9soatcjira_extractionstrong
+	@echo Compiling Source...
+	@$(COMPILE)  $(J9SOATCJIRA_EXTRACTIONSTRONG_CXX_FLAGS) $(J9SOATCJIRA_EXTRACTIONSTRONG_INCLUDES) -c $(**)   $(CARG_OUT)$(J9SOATCJIRA_EXTRACTIONSTRONG_OBJ)$(PS)
+	@echo.
+	@$(LINK) $(J9SOATCJIRA_EXTRACTIONSTRONG_LD_FLAGS) $(J9SOATCJIRA_EXTRACTIONSTRONG_OBJ)$(PS)*.$(OBJ_EXT)  $(J9SOATCJIRA_EXTRACTIONSTRONG_LIBS)  $(LARG_OUT)$(J9SOATCJIRA_EXTRACTIONSTRONG_TARGET).dll
+	$(COPY_FILE)  $(PROJECT_BIN)$(PS)libj9soatcjira_extractionstrong.dll $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)
+	$(COPY_FILE)  $(PROJECT_BIN)$(PS)libj9soatcjira_extractionstrong.lib $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)
+	@echo ________________________________________________________________________________
+
+
+# ==================================================
+# UNIX Build Target
+# ==================================================
+$(J9SOATCJIRA_EXTRACTIONSTRONG_TARGET).so : $(J9SOATCJIRA_EXTRACTIONSTRONG_CXXS)
+	@echo ________________________________________________________________________________
+	@echo Building C++ Client libj9soatcjira_extractionstrong
+	@-rm *.$(OBJ_EXT)
+	@echo Compiling $(J9SOATCJIRA_EXTRACTIONSTRONG_CXXS)
+	@$(COMPILE)  $(J9SOATCJIRA_EXTRACTIONSTRONG_CXX_FLAGS) $(J9SOATCJIRA_EXTRACTIONSTRONG_INCLUDES) -c $(J9SOATCJIRA_EXTRACTIONSTRONG_CXXS) 
+	@mv *.$(OBJ_EXT) $(J9SOATCJIRA_EXTRACTIONSTRONG_OBJ)
+	@echo Linking $(J9SOATCJIRA_EXTRACTIONSTRONG_TARGET).so
+	@$(LINK) $(J9SOATCJIRA_EXTRACTIONSTRONG_LD_FLAGS) $(J9SOATCJIRA_EXTRACTIONSTRONG_OBJ)$(PS)*.$(OBJ_EXT)  $(J9SOATCJIRA_EXTRACTIONSTRONG_LIBS)  $(LARG_OUT) $(J9SOATCJIRA_EXTRACTIONSTRONG_TARGET).so
+	$(COPY_FILE)  $(PROJECT_BIN)$(PS)libj9soatcjira_extractionstrong.so $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)
+	@echo ________________________________________________________________________________
+	
+
+
+
+libj9soatcjira_extractionstrong_cleanNoOp:	
+libj9soatcjira_extractionstrong_clean:
+	@echo ________________________________________________________________________________
+	@echo Cleaning C++ Client libj9soatcjira_extractionstrong
+	-$(DELETE_DIR)  $(J9SOATCJIRA_EXTRACTIONSTRONG_OBJ)
+	-$(DELETE_FILE) $(PROJECT_BIN)$(PS)libj9soatcjira_extractionstrong.*	
+	-$(DELETE_FILE) $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)$(PS)libj9soatcjira_extractionstrong.so
+	-$(DELETE_FILE) $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)$(PS)libj9soatcjira_extractionstrong.dll
+	-$(DELETE_FILE) $(PROJECT_SOA_CLIENT)$(PS)cpp$(PS)libs$(PS)$(PLAT)$(PS)libj9soatcjira_extractionstrong.lib
+	@echo ________________________________________________________________________________
+	
+

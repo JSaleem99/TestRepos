@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!-- 
+ @<COPYRIGHT>@
+ ==================================================
+ Copyright 2012
+ Siemens Product Lifecycle Management Software Inc.
+ All Rights Reserved.
+ ==================================================
+ @<COPYRIGHT>@
+
+ ==================================================
+
+   Auto-generated source from service interface.
+                 DO NOT EDIT
+
+ ==================================================
+-->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://j9.com/Schemas/TCJira_Extraction/2022-06/Extraction"
+    xmlns:tns="http://j9.com/Schemas/TCJira_Extraction/2022-06/Extraction" 
+    xmlns:soa="http://teamcenter.com/Schemas/Soa/2006-03/Base"
+     
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+    <xsd:import namespace="http://teamcenter.com/Schemas/Soa/2006-03/Base"           schemaLocation="SoaBase.xsd" />
+    
+    
+
+
+    <xsd:complexType name="Input">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[
+                
+            ]]></xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+        </xsd:sequence>
+        <xsd:attribute name="objectId" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[
+                    Object ID
+                ]]></xsd:documentation>
+            </xsd:annotation>
+       </xsd:attribute>
+        <xsd:attribute name="objectType" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[
+                    Object type
+                ]]></xsd:documentation>
+            </xsd:annotation>
+       </xsd:attribute>
+        <xsd:attribute name="extractionPath" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[
+                    Extraction Path
+                ]]></xsd:documentation>
+            </xsd:annotation>
+       </xsd:attribute>
+    </xsd:complexType>
+
+
+    <xsd:element name="Output">
+    <xsd:complexType>
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[
+                
+            ]]></xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+        </xsd:sequence>
+        <xsd:attribute name="jsonPath" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[
+                    output Json Path
+                ]]></xsd:documentation>
+            </xsd:annotation>
+       </xsd:attribute>
+    </xsd:complexType>
+    </xsd:element>
+
+
+
+    <xsd:element name="ExtractionOperationInput">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="operationInput" type="tns:Input" >
+               <xsd:annotation>
+                    <xsd:documentation><![CDATA[
+                        operation input
+                    ]]></xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    </xsd:element>
+    <!--  Output is used as the extractionOperation output element -->
+
+
+
+</xsd:schema>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcBusinessData xmlns="http://teamcenter.com/BusinessModel/TcBusinessData" Date="">
+<Add>
+   <Library name="J9SoaTCJira_Extraction" createRelease="tc14000.1.0" serviceLibrary="true"
+       namespace="J9::Soa::TCJira_Extraction" isThirdParty="false">
+     <DependentOn name="sa"/>
+     <DependentOn name="base_utils"/>
+     <DependentOn name="itk"/>
+     <DependentOn name="qry"/>
+     <DependentOn name="user_exits"/>
+     <DependentOn name="tccore"/>
+     <DependentOn name="tc"/>
+   </Library>
+   <Library name="J9SoaTCJira_ObjectSync" createRelease="tc14000.1.0" serviceLibrary="true"
+       namespace="J9::Soa::TCJira_ObjectSync" isThirdParty="false"/>
+   <Library name="J9SoaTcObjectSync" createRelease="tc14000.1.0" serviceLibrary="true"
+       namespace="J9::Soa::TcObjectSync" isThirdParty="false"/>
+   <ServiceInterface name="Extraction" namespace="J9::Soa::TCJira_Extraction" libraryName="J9SoaTCJira_Extraction"
+       serviceLibraryRef="" dependencies="" createRelease="tc14000.1.0" description="Data Extraction in json"/>
+   <ServiceInterface name="TcObjectSync" namespace="J9::Soa::TCJira_ObjectSync" libraryName="J9SoaTCJira_ObjectSync"
+       serviceLibraryRef="" dependencies="" createRelease="tc14000.1.0" description="object sync service"/>
+   <ServiceInterface name="TcObjectSync" namespace="J9::Soa::TcObjectSync" libraryName="J9SoaTcObjectSync"
+       serviceLibraryRef="" dependencies="" createRelease="tc14000.1.0" description="TcObjectSync service"/>
+   <Struct name="Input" createRelease="tc14000.1.0" scope="J9::Soa::TCJira_Extraction::Extraction"
+       namespace="J9::Soa::TCJira_Extraction::_2022_06::Extraction" isPublished="true">
+     <StructElement name="objectId" description="Object ID">
+       <DataTypeRefParam dataType="std::string"/>
+     </StructElement>
+     <StructElement name="objectType" description="Object type">
+       <DataTypeRefParam dataType="std::string"/>
+     </StructElement>
+     <StructElement name="extractionPath" description="Extraction Path">
+       <DataTypeRefParam dataType="std::string"/>
+     </StructElement>
+   </Struct>
+   <Struct name="Output" createRelease="tc14000.1.0" scope="J9::Soa::TCJira_Extraction::Extraction"
+       namespace="J9::Soa::TCJira_Extraction::_2022_06::Extraction" isPublished="true">
+     <StructElement name="jsonPath" description="output Json Path">
+       <DataTypeRefParam dataType="std::string"/>
+     </StructElement>
+   </Struct>
+   <Typedef name="INPUTMAP" description="" scope="J9::Soa::TCJira_ObjectSync::TcObjectSync"
+       namespace="J9::Soa::TCJira_ObjectSync::_2022_06::TcObjectSync" isPublished="true"
+       createRelease="tc14000.1.0">
+     <DataTypeRefParam dataType="std::map">
+       <DataTypeRefParam dataType="std::string"/>
+       <DataTypeRefParam dataType="std::string"/>
+     </DataTypeRefParam>
+   </Typedef>
+   <Struct name="OUTPUT" createRelease="tc14000.1.0" scope="J9::Soa::TCJira_ObjectSync::TcObjectSync"
+       namespace="J9::Soa::TCJira_ObjectSync::_2022_06::TcObjectSync" isPublished="true">
+     <StructElement name="outputValue" description="tcobjectsync service output value">
+       <DataTypeRefParam dataType="std::string"/>
+     </StructElement>
+   </Struct>
+   <Typedef name="INPUTMAP" description="" scope="J9::Soa::TcObjectSync::TcObjectSync"
+       namespace="J9::Soa::TcObjectSync::_2022_06::TcObjectSync" isPublished="true"
+       createRelease="tc14000.1.0">
+     <DataTypeRefParam dataType="std::map">
+       <DataTypeRefParam dataType="std::string"/>
+       <DataTypeRefParam dataType="std::string"/>
+     </DataTypeRefParam>
+   </Typedef>
+   <Struct name="OUTPUT" createRelease="tc14000.1.0" scope="J9::Soa::TcObjectSync::TcObjectSync"
+       namespace="J9::Soa::TcObjectSync::_2022_06::TcObjectSync" isPublished="true">
+     <StructElement name="outputValue" description="output value">
+       <DataTypeRefParam dataType="std::string"/>
+     </StructElement>
+   </Struct>
+   <OperationTemplate id="J9::Soa::TCJira_Extraction::_2022_06::Extraction::Output#J9::Soa::TCJira_Extraction::Extraction::extractionOperation#const,J9::Soa::TCJira_Extraction::_2022_06::Extraction::Input"
+       name="J9::Soa::TCJira_Extraction::Extraction::extractionOperation" returnConst="false"
+       createRelease="tc14000.1.0" description="" const="false" static="false" accessControl="false"
+       returnFreeMemory="false" returnDescription="">
+     <OperationReturnDataTypeRef dataType="J9::Soa::TCJira_Extraction::_2022_06::Extraction::Output"
+         qualifier=""/>
+     <OperationParameter name="operationInput" description="operation input" const="true"
+         inputOutput="Input" freeOutputMemory="false" defaultValue="">
+       <OperationParameterDataTypeRef dataType="J9::Soa::TCJira_Extraction::_2022_06::Extraction::Input"
+           qualifier=""/>
+     </OperationParameter>
+   </OperationTemplate>
+   <OperationTemplate id="J9::Soa::TCJira_ObjectSync::_2022_06::TcObjectSync::OUTPUT#J9::Soa::TCJira_ObjectSync::TcObjectSync::tcObjectSyncOperation#const,J9::Soa::TCJira_ObjectSync::_2022_06::TcObjectSync::INPUTMAP,&amp;"
+       name="J9::Soa::TCJira_ObjectSync::TcObjectSync::tcObjectSyncOperation" returnConst="false"
+       createRelease="tc14000.1.0" description="" const="false" static="false" accessControl="false"
+       returnFreeMemory="false" returnDescription="">
+     <OperationReturnDataTypeRef dataType="J9::Soa::TCJira_ObjectSync::_2022_06::TcObjectSync::OUTPUT"
+         qualifier=""/>
+     <OperationParameter name="mapInput" description="tcobjectsync input map (string , string)"
+         const="true" inputOutput="Input" freeOutputMemory="false" defaultValue="">
+       <OperationParameterDataTypeRef dataType="J9::Soa::TCJira_ObjectSync::_2022_06::TcObjectSync::INPUTMAP"
+           qualifier="&amp;"/>
+     </OperationParameter>
+   </OperationTemplate>
+   <OperationTemplate id="J9::Soa::TcObjectSync::_2022_06::TcObjectSync::OUTPUT#J9::Soa::TcObjectSync::TcObjectSync::tcObjectSyncOperation#const,J9::Soa::TcObjectSync::_2022_06::TcObjectSync::INPUTMAP,&amp;"
+       name="J9::Soa::TcObjectSync::TcObjectSync::tcObjectSyncOperation" returnConst="false"
+       createRelease="tc14000.1.0" description="" const="false" static="false" accessControl="false"
+       returnFreeMemory="false" returnDescription="">
+     <OperationReturnDataTypeRef dataType="J9::Soa::TcObjectSync::_2022_06::TcObjectSync::OUTPUT"
+         qualifier=""/>
+     <OperationParameter name="inputMap" description="input map value" const="true"
+         inputOutput="Input" freeOutputMemory="false" defaultValue="">
+       <OperationParameterDataTypeRef dataType="J9::Soa::TcObjectSync::_2022_06::TcObjectSync::INPUTMAP"
+           qualifier="&amp;"/>
+     </OperationParameter>
+   </OperationTemplate>
+   <Operation id="extractionOperation#const,J9::Soa::TCJira_Extraction::_2022_06::Extraction::Input"
+       name="extractionOperation" createRelease="tc14000.1.0" description="" opTemplate="J9::Soa::TCJira_Extraction::_2022_06::Extraction::Output#J9::Soa::TCJira_Extraction::Extraction::extractionOperation#const,J9::Soa::TCJira_Extraction::_2022_06::Extraction::Input"
+       interface="J9::Soa::TCJira_Extraction::Extraction" isPublished="true" canOverride="false"
+       isPreActionAllowed="false" isPostActionAllowed="false" isPreConditionAllowed="false"
+       returnDescription="" component="" useCase="" dependencies="" exceptionCondition="">
+     <ParameterInfo parameterName="operationInput" description="operation input"/>
+   </Operation>
+   <Operation id="tcObjectSyncOperation#const,J9::Soa::TCJira_ObjectSync::_2022_06::TcObjectSync::INPUTMAP,&amp;"
+       name="tcObjectSyncOperation" createRelease="tc14000.1.0" description="" opTemplate="J9::Soa::TCJira_ObjectSync::_2022_06::TcObjectSync::OUTPUT#J9::Soa::TCJira_ObjectSync::TcObjectSync::tcObjectSyncOperation#const,J9::Soa::TCJira_ObjectSync::_2022_06::TcObjectSync::INPUTMAP,&amp;"
+       interface="J9::Soa::TCJira_ObjectSync::TcObjectSync" isPublished="true" canOverride="false"
+       isPreActionAllowed="false" isPostActionAllowed="false" isPreConditionAllowed="false"
+       returnDescription="" component="" useCase="" dependencies="" exceptionCondition="">
+     <ParameterInfo parameterName="mapInput" description="tcobjectsync input map (string , string)"/>
+   </Operation>
+   <Operation id="tcObjectSyncOperation#const,J9::Soa::TcObjectSync::_2022_06::TcObjectSync::INPUTMAP,&amp;"
+       name="tcObjectSyncOperation" createRelease="tc14000.1.0" description="" opTemplate="J9::Soa::TcObjectSync::_2022_06::TcObjectSync::OUTPUT#J9::Soa::TcObjectSync::TcObjectSync::tcObjectSyncOperation#const,J9::Soa::TcObjectSync::_2022_06::TcObjectSync::INPUTMAP,&amp;"
+       interface="J9::Soa::TcObjectSync::TcObjectSync" isPublished="true" canOverride="false"
+       isPreActionAllowed="false" isPostActionAllowed="false" isPreConditionAllowed="false"
+       returnDescription="" component="" useCase="" dependencies="" exceptionCondition="">
+     <ParameterInfo parameterName="inputMap" description="input map value"/>
+   </Operation>
+   <TcGlobalConstantAttach constantName="Fnd0SelectedLocales" value="en_US"/>
+   <Functionality name="J9mdxextraction" displayName="MDX Extraction" enabledForVerificationRules="false"
+       description="Component for the template - j9mdxextraction"/>
+</Add>
+</TcBusinessData>

@@ -1,0 +1,157 @@
+Log file created on on 07-17-2024 11:26 AM
+_______________________________________________________________________________
+
+
+
+_______________________________________________________________________________
+Saving the Data Model for j9mdxextraction.
+_______________________________________________________________________________
+Obtaining Build Information...
+_______________________________________________________________________________
+Updating The Build Files For j9mdxextraction...   
+Updating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\makefile.wntx64.
+Updating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\build\J9SoaTCJira_Extraction\libj9soatcjira_extraction\makefile.
+Creating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\build\J9SoaTcObjectSync\makefile.
+Creating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\build\J9SoaTcObjectSync\J9SoaTcObjectSyncAutoGen\makefile.
+Creating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\build\J9SoaTcObjectSync\J9SoaTcObjectSyncAutoGen\J9SoaTcObjectSyncAutoGen-build.xml.
+Creating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\build\J9SoaTcObjectSync\J9SoaTcObjectSyncStrong\makefile.
+Creating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\build\J9SoaTcObjectSync\J9SoaTcObjectSyncStrong\J9SoaTcObjectSyncStrong-build.xml.
+Creating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\build\J9SoaTcObjectSync\J9SoaTcObjectSyncLoose\makefile.
+Creating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\build\J9SoaTcObjectSync\J9SoaTcObjectSyncLoose\J9SoaTcObjectSyncLoose-build.xml.
+Creating the build file C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\build\J9SoaTcObjectSync\libj9soatcobjectsync\makefile.
+_______________________________________________________________________________
+_______________________________________________________________________________
+Generating Source Files... 
+_______________________________________________________________________________
+Generating code for the service library J9SoaTCJira_Extraction.
+init:
+
+clean:
+[delete] Deleting directory C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_Extraction
+[delete] Deleting directory C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionImpl
+[delete] Deleting directory C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionClient
+[delete] Deleting directory C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionWeb
+
+setup:
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_Extraction
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionImpl
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionClient
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionWeb
+
+init:
+
+define-classpath:
+
+[CreateService] Using Service Source XML file: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\extensions\default.xml
+[CreateService] Creating [CPP ] Server Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_Extraction) ...
+[CreateService] Creating [WSDL] WebTier Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionWeb\xids) ...
+[CreateService] Copying 2 files to C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionWeb\xids
+[CreateService] Creating [JAVA] STRONG Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionClient\strong\java)...
+[CreateService] Creating [JAVA] LOOSE Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionClient\loose\java)...
+[CreateService] Creating [TEST] JUnit (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionClient\testSrc\com\j9\services\strong\tcjira_extraction)
+init:
+
+net-dir-check:
+
+net-final:
+
+auto-generation-final:
+
+init:
+
+packaging:
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionClient\strong\cpp does not exist.
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionClient\strong\cpp does not exist.
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionClient\strong\cppMngd does not exist.
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ExtractionClient\strong\cppMngd does not exist.
+
+_______________________________________________________________________________
+_______________________________________________________________________________
+Generating code for the service library J9SoaTCJira_ObjectSync.
+init:
+
+clean:
+[delete] Deleting directory C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSync
+[delete] Deleting directory C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncImpl
+[delete] Deleting directory C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncClient
+[delete] Deleting directory C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncWeb
+
+setup:
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSync
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncImpl
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncClient
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncWeb
+
+init:
+
+define-classpath:
+
+[CreateService] Using Service Source XML file: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\extensions\default.xml
+[CreateService] Creating [CPP ] Server Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSync) ...
+[CreateService] Creating [WSDL] WebTier Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncWeb\xids) ...
+[CreateService] Copying 2 files to C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncWeb\xids
+[CreateService] Creating [JAVA] STRONG Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncClient\strong\java)...
+[CreateService] Creating [JAVA] LOOSE Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncClient\loose\java)...
+[CreateService] Creating [TEST] JUnit (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncClient\testSrc\com\j9\services\strong\tcjira_objectsync)
+init:
+
+net-dir-check:
+
+net-final:
+
+auto-generation-final:
+
+init:
+
+packaging:
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncClient\strong\cpp does not exist.
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncClient\strong\cpp does not exist.
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncClient\strong\cppMngd does not exist.
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTCJira_ObjectSyncClient\strong\cppMngd does not exist.
+
+_______________________________________________________________________________
+_______________________________________________________________________________
+Generating code for the service library J9SoaTcObjectSync.
+init:
+
+clean:
+
+setup:
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSync
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncImpl
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncClient
+[mkdir] Created dir: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncWeb
+
+init:
+
+define-classpath:
+
+[CreateService] Using Service Source XML file: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\extensions\default.xml
+[CreateService] Creating [CPP ] Server Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSync) ...
+[CreateService] Creating [WSDL] WebTier Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncWeb\xids) ...
+[CreateService] Copying 2 files to C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncWeb\xids
+[CreateService] Creating [JAVA] STRONG Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncClient\strong\java)...
+[CreateService] Creating [JAVA] LOOSE Files (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncClient\loose\java)...
+[CreateService] Creating [TEST] JUnit (C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncClient\testSrc\com\j9\services\strong\tcobjectsync)
+init:
+
+net-dir-check:
+
+net-final:
+
+auto-generation-final:
+
+init:
+
+packaging:
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncClient\strong\cpp does not exist.
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncClient\strong\cpp does not exist.
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncClient\strong\cppMngd does not exist.
+[copy] Warning: C:\Apps\TC142\TC_ROOT\bmide\workspace\14000.0.0\j9mdxextraction\output\generated\J9SoaTcObjectSyncClient\strong\cppMngd does not exist.
+
+_______________________________________________________________________________
+_______________________________________________________________________________
+The CDT Nature is up-to-date.
+_______________________________________________________________________________
+Code generation complete.
+_______________________________________________________________________________
